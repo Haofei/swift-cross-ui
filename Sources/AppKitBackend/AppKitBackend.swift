@@ -443,8 +443,9 @@ public final class AppKitBackend: AppBackend {
             object: window,
             queue: .main
         ) { notification in
-            let backingScaleFactorChanged = window.lastBackingScaleFactor != window.backingScaleFactor
-			
+            let backingScaleFactorChanged =
+                window.lastBackingScaleFactor != window.backingScaleFactor
+
             if backingScaleFactorChanged {
                 action()
             }
@@ -479,7 +480,7 @@ public final class AppKitBackend: AppBackend {
     public func swap(childAt firstIndex: Int, withChildAt secondIndex: Int, in container: NSView) {
         assert(
             container.subviews.indices.contains(firstIndex)
-            && container.subviews.indices.contains(secondIndex),
+                && container.subviews.indices.contains(secondIndex),
             """
             attempted to swap container child out of bounds; container count \
             = \(container.subviews.count); firstIndex = \(firstIndex); \
@@ -2411,7 +2412,7 @@ public class NSCustomWindow: NSWindow {
         func setCloseHandler(_ closeHandler: @escaping () -> Void) {
             self.closeHandler = closeHandler
         }
-      
+
         func windowWillClose(_ notification: Notification) {
             closeHandler?()
 

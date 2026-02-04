@@ -47,10 +47,11 @@ public final class WindowNode<Content: View>: SceneGraphNode {
     ) {
         self.scene = scene
 
-        let openOnAppLaunch = switch environment.defaultLaunchBehavior {
-            case .presented: true
-            case .automatic, .suppressed: false
-        }
+        let openOnAppLaunch =
+            switch environment.defaultLaunchBehavior {
+                case .presented: true
+                case .automatic, .suppressed: false
+            }
 
         if openOnAppLaunch {
             self.windowReference = WindowReference(
@@ -86,7 +87,7 @@ public final class WindowNode<Content: View>: SceneGraphNode {
                     onClose: { self.windowReference = nil }
                 )
                 windowReference = reference
-                
+
                 _ = reference.update(
                     nil,
                     backend: backend,

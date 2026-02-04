@@ -53,7 +53,7 @@ extension EnvironmentValues {
     /// to dismiss (close) the enclosing sheet, popover, or other presentation.
     ///
     /// If you want to close the enclosing window, use ``EnvironmentValues/dismissWindow``
-    /// instead. 
+    /// instead.
     ///
     /// Example:
     /// ```swift

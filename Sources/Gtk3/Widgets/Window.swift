@@ -83,10 +83,10 @@ open class Window: Bin {
 
     public override func registerSignals() {
         let handler:
-        @convention(c) (UnsafeMutableRawPointer, OpaquePointer, UnsafeMutableRawPointer) -> Void =
-        { _, value1, data in
-            SignalBox1<OpaquePointer>.run(data, value1)
-        }
+            @convention(c) (UnsafeMutableRawPointer, OpaquePointer, UnsafeMutableRawPointer) -> Void =
+                { _, value1, data in
+                    SignalBox1<OpaquePointer>.run(data, value1)
+                }
 
         addSignal(name: "delete-event", handler: gCallback(handler)) {
             [weak self] (_: OpaquePointer) in
