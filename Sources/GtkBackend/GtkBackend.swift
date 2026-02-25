@@ -1755,6 +1755,7 @@ public final class GtkBackend: AppBackend {
             }
 
             self.runInMainThread {
+                self.dismissSheet(sheet)
                 sheet.onDismiss?()
             }
         }
