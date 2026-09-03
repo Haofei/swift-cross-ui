@@ -119,6 +119,15 @@
       }
     },
     {
+      "identity" : "swift-system",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-system",
+      "state" : {
+        "revision" : "869129b7bf4ecc57b97d0193ad29690ca2134750",
+        "version" : "1.8.1"
+      }
+    },
+    {
       "identity" : "swift-winui",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/moreSwift/swift-winui",
